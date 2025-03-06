@@ -41,7 +41,7 @@ Este script deve ser utilizado **apenas para fins educacionais e de pesquisa OSI
 Sinta-se à vontade para contribuir! Se tiver sugestões, abra uma *issue* ou envie um *pull request*.
 
 ## 🌟 Autor
-**[Seu Nome](https://github.com/Jorgemartin2)**  
+**[Jorge Martin](https://github.com/Jorgemartin2)**  
 Desenvolvedor entusiasta de Cybersecurity.
 
 ---
