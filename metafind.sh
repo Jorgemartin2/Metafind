@@ -24,16 +24,14 @@ if [ -n "$missing" ]; then
 fi
 
 # Busca links no Google
-lynx --dump "https://www.google.com/search?q=site:$1+ext:$2" | \
-grep -oP 'https?://[^ ]+\.'$2'' > log.txt
+lynx --dump "https://www.google.com/search?q=site:$1+ext:$2" | grep ".pdf"  | cut -d "=" -f 2 | egrep -v "site|google" | sed 's/...$//' > log.txt
 
 # Baixa os arquivos
 > arq.txt  # Cria/limpa arq.txt antes de começar
 xargs -n 1 wget -q < log.txt
 
 # Registra os arquivos baixados
-ls *.$2 *
-.html 2>/dev/null > arq.txt
+ls *.$2 *.html 2>/dev/null > arq.txt
 
 # Executa o exiftool nos arquivos
 if [ -s arq.txt ]; then
